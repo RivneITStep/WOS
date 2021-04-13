@@ -1,5 +1,8 @@
 import React from 'react'
-import { Navbar, Nav, Container, NavDropdown, Form, FormControl, Button } from "react-bootstrap"
+import "../../index.css"
+import {Nav, Navbar, NavDropdown, Form,Button, FormControl} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
     return (
@@ -27,18 +30,6 @@ const Header = () => {
                 </Form>
             </Navbar.Collapse>
         </Navbar>
-            {/* <Navbar bg="light" className="navbar navbar-expand-lg navbar-dark bg-primary" expand="lg">
-                <Navbar.Brand className="navbar-brand" href="#home">WOShop</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto navbar-nav">
-                    </Nav>
-                    <Form inline>
-                        <FormControl type="text" placeholder="Search" className="form-control mr-sm-2" />
-                        <Button className="btn btn-secondary my-2 my-sm-0" >Search</Button>
-                    </Form>
-                </Navbar.Collapse>
-            </Navbar> */}
         </header>
     )
 }

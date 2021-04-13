@@ -1,12 +1,16 @@
 @import "./bootstrap.min.css";
-.nav-link-{
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
+
+.nav-link- {
     padding: 0;
-    color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, .5);
 }
+
 .nav-link-:hover {
     color: #fff;
     text-decoration: none;
 }
-a:active{
+
+a:active {
     color: #fff;
 }

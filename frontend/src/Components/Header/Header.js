@@ -6,17 +6,18 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
+        <header>
         <Navbar className="navbar navbar-expand-lg navbar-dark bg-primary">
-            <Navbar.Brand >WOS</Navbar.Brand>
+            <Navbar.Brand className="navbar-brand">WOS</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link className="nav-link-"><Link to="/" className="nav-link-">Home</Link></Nav.Link>
-                    <Nav.Link >Profile </Nav.Link>
-                    <Nav.Link >Sign In</Nav.Link>
-                    <Nav.Link >Cart </Nav.Link>
+                    <Nav.Link className="nav-link">Home</Nav.Link>
+                    <Nav.Link className="nav-link">Profile </Nav.Link>
+                    <Nav.Link className="nav-link">Sign In</Nav.Link>
+                    <Nav.Link className="nav-link">Cart </Nav.Link>
                     <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                        <NavDropdown.Item><Link to="/contact">Contact</Link></NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                         <NavDropdown.Divider />
@@ -29,6 +30,7 @@ const Header = () => {
                 </Form>
             </Navbar.Collapse>
         </Navbar>
+        </header>
     )
 }
 

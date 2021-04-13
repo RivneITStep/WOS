@@ -1,6 +1,4 @@
 @import "./bootstrap.min.css";
-@import "../node_modules/font-awesome/css/font-awesome.min.css";
-
 .nav-link- {
     padding: 0;
     color: rgba(255, 255, 255, .5);

@@ -44,19 +44,19 @@ const Contact = () => {
                     <Form role="form" action="https://formsubmit.io/send/coderthemes@gmail.com" method="post" className="form-main">
 
                         <Navbar className="form-group">
-                            <label for="name2">Name</label>
+                            <label htmlFor="name2">Name</label>
                             <input className="form-control" id="name2" name="name" type="text" placeholder="Name" />
                             <Navbar className="error" id="err-name" style={{ display: "none" }}>Please enter name</Navbar>
                         </Navbar>
 
                         <Navbar className="form-group">
-                            <label for="email2">Email</label>
+                            <label htmlFor="email2">Email</label>
                             <input className="form-control" id="email2" name="email" type="text" placeholder="E-mail" />
                             <Navbar className="error" id="err-emailvld" style={{ display: "none;" }}>E-mail is not a valid format</Navbar>
                         </Navbar>
 
                         <Navbar className="form-group">
-                            <label for="message2">Message</label>
+                            <label htmlFor="message2">Message</label>
                             <textarea className="form-control" id="message2" name="message" rows="5" placeholder="Message"></textarea>
                             <Navbar className="error" id="err-message" style={{ display: "none;" }}>Please enter message</Navbar>
                         </Navbar>

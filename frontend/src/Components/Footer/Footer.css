@@ -1,6 +1,6 @@
 footer{
-    margin-top: 300px;
-    /* margin-top: auto; */
+    /* margin-top: 300px; */
+    margin-top: auto;
     background-color: #1a1a1a;
 }
 footer h5{
@@ -45,4 +45,7 @@ footer h5{
     color: #55595c;
     text-align: center;
     font-size: 15px;
+}
+.btn-send{
+    padding: 5px 20px;
 }

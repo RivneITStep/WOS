@@ -44,7 +44,7 @@ const Footer = () => {
                             </fieldset>
                             <fieldset className="form-group text-xs-right">
                                 {/* <button type="button" className="btn btn-secondary-outline btn-lg">Send</button> */}
-                                <button type="button" className="">Send</button>
+                                <button type="button" className="btn btn-outline-light btn-send">Send</button>
                             </fieldset>
                     </Form>
                 </Col>   

@@ -19,11 +19,12 @@ exports.getSingleProduct = async(req, res, next) => {
 }
 
 exports.postDeleteProduct = async(req, res, next) => {
+    const idDeleteProduct = req.params.id;
     const products = await Product.deleteOne({_id: req.params.id});
     res.status(200).json({
         success: true,
         message: "deleteProduct",
-        products
+        idDeleteProduct
     })
 }
 

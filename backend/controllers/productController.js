@@ -1,29 +1,7 @@
-const Product = require("../models/product");
-
-exports.getProducts = async (req, res, next) => {
-    const products = await  Product.find();
+exports.getProducts = (req, res, next) => {
     res.status(200).json({
         success: true,
-        message: "getProducts",
-        products
-    })
-}
-
-exports.getSingleProduct = async(req, res, next) => {
-    const product = await Product.findById(req.params.id);
-    res.status(200).json({
-        success: true,
-        message: "getSingleProduct",
-        product
-    })
-}
-
-exports.postDeleteProduct = async(req, res, next) => {
-    const products = await Product.deleteOne({_id: req.params.id});
-    res.status(200).json({
-        success: true,
-        message: "deleteProduct",
-        products
+        message: "getProducts"
     })
 }
 

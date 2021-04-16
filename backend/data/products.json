@@ -1,0 +1,87 @@
+[
+    {
+        "name": "Ноутбук Asus ROG Strix G15 G512LI-HN058 (90NR0381-M01630) Black",
+        "price": 26999,
+        "descriptions": "Экран 15.6 IPS (1920x1080) Full HD 144 Гц, матовый / Intel Core i5-10300H (2.5 - 4.5 ГГц) / RAM 16 ГБ / SSD 512 ГБ / nVidia GeForce GTX 1650 Ti, 4 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / без ОС / 2.39 кг / черный",
+        "images": [
+            {
+                "product_id": "products/gfu6j485hy",
+                "url": "https://content.rozetka.com.ua/goods/images/big/27122440.jpg"
+            }
+        ],
+        "category": "Laptops",
+        "seller": "KTC",
+        "stock": 10,
+        "numOfReviews": 99,
+        "reviews": []
+    },
+
+    {
+        "name": "Ноутбук Acer Aspire 5 A515-55G (NX.HZFEU.009) Pure Silver Суперцена!!!",
+        "price": 18999,
+        "descriptions": "Экран 15.6 IPS (1920x1080) Full HD, матовый / Intel Core i5-1035G1 (1.0 - 3.6 ГГц) / RAM 8 ГБ / SSD 512 ГБ / nVidia GeForce MX350, 2 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / без ОС / 1.8 кг / серебристый",
+        "images": [
+            {
+                "product_id": "products/dyhr6eng8y",
+                "url": "https://content2.rozetka.com.ua/goods/images/big/87589181.jpg"
+            }
+        ],
+        "category": "Laptops",
+        "seller": "KTC",
+        "stock": 5,
+        "numOfReviews": 50,
+        "reviews": []
+    },
+
+    {
+        "name": "Ноутбук Asus Laptop E410MA-EB268 (90NB0Q11-M17970) Peacock Blue",
+        "price": 9999,
+        "descriptions": "Экран 14 IPS (1920x1080) Full HD, матовый / Intel Celeron N4020 (1.1 - 2.8 ГГц) / RAM 4 ГБ / SSD 256 ГБ / Intel UHD Graphics 600 / без ОД / Wi-Fi / Bluetooth / веб-камера / без ОС / 1.3 кг / черный с синим",
+        "images": [
+            {
+                "product_id": "products/dty65vgu75t",
+                "url": "https://content1.rozetka.com.ua/goods/images/big/163130446.jpg"
+            }
+
+        ],
+        "category": "Laptops",
+        "seller": "KTC",
+        "stock": 10,
+        "numOfReviews": 99,
+        "reviews": []
+    },
+
+    {
+        "name": "Монитор 24.5 Acer Nitro VG252QP (UM.KV2EE.P01) - NVIDIA® G-SYNC® Compatible",
+        "price": 7200,
+        "descriptions": "Превосходная синхронизация Новейшие мониторы для игр и развлечений имеют маркировку NVIDIA G-SYNC Compatible. Это значит, что дисплеи прошли сертификацию NVIDIA, чтобы вы могли наслаждаться плавным геймплеем и возможностями технологии переменной частоты обновления (VRR), которая устраняет разрывы, прерывания, искажения и мерцания изображения при частоте обновления 144 Гц.",
+        "images": [
+            {
+                "product_id": "products/fdrtshfg65",
+                "url": "https://i2.rozetka.ua/goods/18530646/acer_um_kv2ee_p01_images_18530646283.jpg"
+            }
+        ],
+        "category": "Monitors",
+        "seller": "Rozetka",
+        "stock": 10,
+        "numOfReviews": 50,
+        "reviews": []
+    },
+
+    {
+        "name": "Mонитор 27 Samsung Curved C27F396F (LC27F396FHIXCI)",
+        "price": 4444,
+        "descriptions": "Ощутите поистине захватывающие эмоции от просмотра или работы с необычайно изогнутым монитором Samsung. Линия изгиба изогнутого монитора такая же как у экрана в кинотеатре iMax и составляет 1 800 R или 1 800 мм (радиус дуги по которой изогнут экран), что создает более широкое поле зрения, повышает глубину восприятия картинки и сводит к минимуму отвлечения по периферии. Таким образом, любимое ТВ-шоу, гоночная игра и другой медиа-контент подарят совершенно иной, незабываемый опыт.",
+        "images": [
+            {
+                "product_id": "products/g438rtrth5435",
+                "url": "https://i2.rozetka.ua/goods/18530646/acer_um_kv2ee_p01_images_18530646283.jpg"
+            }
+        ],
+        "category": "Monitors",
+        "seller": "Rozetka",
+        "stock": 20,
+        "numOfReviews": 100,
+        "reviews": []
+    }
+]

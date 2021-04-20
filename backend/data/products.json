@@ -1,23 +1,5 @@
 [
     {
-        "name": "Компьютер ARTLINE Gaming X51 v12",
-        "price": 29763,
-        "descriptions": "Intel Core i5-9400F (2.9 - 4.1 ГГц) / RAM 16 ГБ / HDD 1 ТБ + SSD 480 ГБ / nVidia GeForce GTX 1660 Super, 6 ГБ / без ОД / LAN / без ОС",
-        "images": [
-            {
-                "product_id": "products/fdhdhhjkjh",
-                "url": "https://content2.rozetka.com.ua/goods/images/big/18578246.jpg"
-            }
-        ],
-        "category": "CPU",
-        "saller": "Rozetka",
-        "stock": 100,
-        "salePrice": 0.0,
-        "numOfReviwes": 66,
-        "numOfPurchase": 1,
-        "reviews": []
-    },
-    {
         "name": "Монитор 23,6 Acer Nitro EI242QRPbiipx",
         "price": 5499,
         "descriptions": "Экран 15.6' IPS (1920x1080) Full HD, матовый / Intel Core i5-1135G7 (4.2 ГГц) / RAM 8 ГБ / SSD 512 ГБ / nVidia GeForce MX350, 2 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / без ОС / 1.9 кг / серебристый",
@@ -28,47 +10,11 @@
             }
         ],
         "category": "Monitors",
-        "saller": "Rozetka",
+        "seller": "Rozetka",
         "stock": 45,
         "salePrice": 4999,
-        "numOfReviwes": 1566,
+        "numOfReviews": 1566,
         "numOfPurchase": 400,
-        "reviews": []
-    },
-    {
-        "name": "Ноутбук Acer Aspire 5 A515-56G-54JD (NX.A1LEU.00A) Pure Silver",
-        "price": 19999,
-        "descriptions": "Экран 15.6' IPS (1920x1080) Full HD, матовый / Intel Core i5-1135G7 (4.2 ГГц) / RAM 8 ГБ / SSD 512 ГБ / nVidia GeForce MX350, 2 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / без ОС / 1.9 кг / серебристый",
-        "images": [
-            {
-                "product_id": "products/esgt458s4h84",
-                "url": "https://i2.rozetka.ua/goods/20687946/acer_nx_a1leu_00a_images_20687946076.jpg"
-            }
-        ],
-        "category": "Laptops",
-        "saller": "KTC",
-        "stock": 15,
-        "salePrice": 0.0,
-        "numOfReviwes": 99,
-        "numOfPurchase": 2,
-        "reviews": []
-    },
-    {
-        "name": "Мышь Logitech M185 Wireless Grey",
-        "price": 539,
-        "descriptions": "Работает на компьютерах с операционной системой Windows и Mac. Он такой миниатюрный и незаметный, что, подключив его к USB-порту, вы можете оставить его там. К тому же можно смело распрощаться с беспокойством о том, что вы потеряете приемник.",
-        "images": [
-            {
-                "product_id": "products/910-002238",
-                "url": "https://content.rozetka.com.ua/goods/images/big/10596469.jpg"
-            }
-        ],
-        "category": "Mouses",
-        "saller": "KTC",
-        "stock": 1000,
-        "salePrice": 0.0,
-        "numOfReviwes": 1832,
-        "numOfPurchase": 666,
         "reviews": []
     },
     {
@@ -82,10 +28,10 @@
             }
         ],
         "category": "Processors",
-        "saller": "Rozetka",
+        "seller": "Rozetka",
         "stock": 256,
         "salePrice": 0.0,
-        "numOfReviwes": 752,
+        "numOfReviews": 752,
         "numOfPurchase": 65,
         "reviews": []
     },
@@ -100,10 +46,10 @@
             }
         ],
         "category": "Keyboards",
-        "saller": "Rozetka",
+        "seller": "Rozetka",
         "stock": 420,
         "salePrice": 0.0,
-        "numOfReviwes": 585,
+        "numOfReviews": 585,
         "numOfPurchase": 51,
         "reviews": []
     },
@@ -118,10 +64,10 @@
             }
         ],
         "category": "Sellphones",
-        "saller": "Barahlo.com",
+        "seller": "Barahlo.com",
         "stock": 555,
         "salePrice": 0.0,
-        "numOfReviwes": 33,
+        "numOfReviews": 33,
         "numOfPurchase": 3,
         "reviews": []
     },
@@ -136,10 +82,10 @@
             }
         ],
         "category": "TV set",
-        "saller": "Rozetka",
+        "seller": "Rozetka",
         "stock": 233,
         "salePrice": 12999,
-        "numOfReviwes": 152,
+        "numOfReviews": 152,
         "numOfPurchase": 80,
         "reviews": []
     },
@@ -154,29 +100,47 @@
             }
         ],
         "category": "Cameras",
-        "saller": "Comfy",
+        "seller": "Comfy",
         "stock": 1,
         "salePrice": 0.0,
-        "numOfReviwes": 1065,
+        "numOfReviews": 1065,
         "numOfPurchase": 0,
         "reviews": []
     },
+
     {
-        "name": "Игровая приставка PlayStation 5 Digital Edition",
-        "price": 13699,
-        "descriptions": "8-ядерный x86-64 AMD Ryzen Zen 2 (Частота: до 3.5 ГГц), SSD-накопитель: 825 ГБ, Поддержка телевизоров 4K 120Гц, 8K телевизоров, поддержка, Звук: Технология Tempest 3D AudioTech",
+        "name": "Ноутбук Asus Laptop E410MA-EB268 (90NB0Q11-M17970) Peacock Blue",
+        "price": 9999,
+        "descriptions": "Экран 14 IPS (1920x1080) Full HD, матовый / Intel Celeron N4020 (1.1 - 2.8 ГГц) / RAM 4 ГБ / SSD 256 ГБ / Intel UHD Graphics 600 / без ОД / Wi-Fi / Bluetooth / веб-камера / без ОС / 1.3 кг / черный с синим",
         "images": [
             {
-                "product_id": "products/ksfdklfdkmfd55525",
-                "url": "https://content1.rozetka.com.ua/goods/images/big/134045006.jpg"
+                "product_id": "products/dty65vgu75t",
+                "url": "https://content1.rozetka.com.ua/goods/images/big/163130446.jpg"
+            }
+
+        ],
+        "category": "Laptops",
+        "seller": "KTC",
+        "stock": 10,
+        "numOfReviews": 99,
+        "reviews": []
+    },
+
+    {
+        "name": "Монитор 24.5 Acer Nitro VG252QP (UM.KV2EE.P01) - NVIDIA® G-SYNC® Compatible",
+        "price": 7200,
+        "descriptions": "Превосходная синхронизация Новейшие мониторы для игр и развлечений имеют маркировку NVIDIA G-SYNC Compatible. Это значит, что дисплеи прошли сертификацию NVIDIA, чтобы вы могли наслаждаться плавным геймплеем и возможностями технологии переменной частоты обновления (VRR), которая устраняет разрывы, прерывания, искажения и мерцания изображения при частоте обновления 144 Гц.",
+        "images": [
+            {
+                "product_id": "products/fdrtshfg65",
+                "url": "https://i2.rozetka.ua/goods/18530646/acer_um_kv2ee_p01_images_18530646283.jpg"
             }
         ],
-        "category": "PlayStation",
-        "saller": "КТС",
-        "stock": 0,
-        "salePrice": 0.0,
-        "numOfReviwes": 1065,
-        "numOfPurchase": 475,
+        "category": "Monitors",
+        "seller": "Rozetka",
+        "stock": 10,
+        "numOfReviews": 50,
         "reviews": []
-    }
+    },
+
 ]

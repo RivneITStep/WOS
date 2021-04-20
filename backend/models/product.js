@@ -1,35 +1,35 @@
 const mongoose = require("mongoose");
 
-const productsSchema = new mongoose.Schema({
-    name:{
-        type: String,
+const productScheme = new mongoose.Schema({
+    name: {
+        type : String,
         required: [true, "Enter product name"],
         trim: true,
-        maxLength: [200, "Name required less then 200 characters"],
+        maxLength: [200, "Name required less then 200 characters"]
     },
     price: {
         type: Number,
-        required: [true, "Enter product price"],
+        required: [true, 'Enter product price'],
         maxLength: [5, "Price range from 1 to 99999"],
-        default: 0.0,
+        default: 0.0
     },
     descriptions: {
         type: String,
-        required: [true, "Enter product description"],
+        required: [true, "Enter product description"]
     },
     images: [
         {
             product_id: {
                 type: String,
-                required: [true],
+                required: true
             },
             url: {
                 type: String,
-                required: [true],
+                required: true
             }
         }
     ],
-    category: {
+    category:{
         type: String,
         required: [true, "Select category"],
         enum: {
@@ -45,18 +45,18 @@ const productsSchema = new mongoose.Schema({
                 'Cameras',
                 'PlayStation',
             ],
-            message: "Select correct category",
+            message: "Select correct category"
         }
     },
-    saller:{
+    seller: {
         type: String,
-        required: [true, "Enter product saller"],
+        required: [true, "Enter product seller"]
     },
     stock: {
         type: Number,
         required: [true, "Enter product stock"],
         maxLength: [5, "Stock range from 1 to 99999"],
-        default: 0,
+        default: 0
     },
     salePrice:{
         type: Number,
@@ -64,7 +64,7 @@ const productsSchema = new mongoose.Schema({
         maxLength: [5, "Sale price range from 1 to 99999"],
         default: 0.0,
     },
-    numOfReviwers:{
+    numOfReviews:{
         type: Number,
         default: 0,
     },    
@@ -74,21 +74,21 @@ const productsSchema = new mongoose.Schema({
     },
     reviews: [
         {
-           user: {
-               type: String,
-                required: [true],
-           },
-           name: {
+            user: {
                 type: String,
-                required: [true],
+                required: true
+            },
+            name: {
+                type: String,
+                required: true
             },
             rating: {
-                type: String,
-                required: [true],
+                type: Number,
+                required: true
             },
             comment: {
                 type: String,
-                required: [true],
+                required: true
             }
         }
     ],
@@ -98,4 +98,5 @@ const productsSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('Product', productsSchema)
+module.exports  = mongoose.model('Product', productScheme);
+

@@ -1,5 +1,4 @@
 footer{
-    /* margin-top: 300px; */
     margin-top: auto;
     background-color: #1a1a1a;
 }
@@ -10,11 +9,10 @@ footer h5{
 }
 .first-col{
     display: block;
-    padding-left: 30px;
 }
 .form-contr{
     margin-bottom: 10px;
-    width: 350px;
+    width: 330px;
     padding: 10px 15px;
 }
 .form-group{
@@ -22,7 +20,7 @@ footer h5{
 }
 .social-block{
     background-color: #1a1a1a;
-    padding: 20px 38px;
+    padding: 20px 8px;
 }
 .social-block a{
    font-size: 30px;

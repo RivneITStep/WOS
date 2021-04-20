@@ -9,8 +9,7 @@
     "work": "concurrently \"nodemon backend/server.js\" \"npm run src\"",
     "dev": "SET NODE_ENV=DEVELOPMENT& nodemon backend/server.js",
     "prod": "SET NODE_ENV=PRODUCTION& nodemon backend/server.js",
-    "src": "cd frontend && npm start",
-    "work": "concurrently \"nodemon backend/server.js\" \"npm run src\""
+    "seed": "node backend/helpers/seeder.js"
   },
   "author": "",
   "license": "ISC",

@@ -10,7 +10,7 @@ exports.getProducts = async (req, res, next) => {
 }
 
 exports.getSingleProduct = async(req, res, next) => {
-    const product = await Product.findById(req.params.id);
+    const product = await Product.findById({_id: req.params.id});
     res.status(200).json({
         success: true,
         message: "getSingleProduct",
@@ -28,6 +28,15 @@ exports.postDeleteProduct = async(req, res, next) => {
     })
 }
 
+exports.editProduct = async(req, res, next) => {
+    const productEdit = await Product.findById({_id: req.params.id});
+    res.status(200).json({
+        success: true,
+        message: "editProduct",
+        productEdit
+    })
+}
+
 exports.get404Page = (req, res, next) => {
     res.status(404).json({
         success: true,
@@ -35,7 +44,7 @@ exports.get404Page = (req, res, next) => {
     })   
 
 }
-  
+
 exports.getHomePage = (req, res, next) => {
     res.status(200).json({
         success: true,

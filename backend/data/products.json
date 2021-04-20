@@ -1,5 +1,41 @@
 [
     {
+        "name": "Компьютер ARTLINE Gaming X51 v12",
+        "price": 29763,
+        "descriptions": "Intel Core i5-9400F (2.9 - 4.1 ГГц) / RAM 16 ГБ / HDD 1 ТБ + SSD 480 ГБ / nVidia GeForce GTX 1660 Super, 6 ГБ / без ОД / LAN / без ОС",
+        "images": [
+            {
+                "product_id": "products/fdhdhhjkjh",
+                "url": "https://content2.rozetka.com.ua/goods/images/big/18578246.jpg"
+            }
+        ],
+        "category": "CPU",
+        "saller": "Rozetka",
+        "stock": 100,
+        "salePrice": 0.0,
+        "numOfReviwes": 66,
+        "numOfPurchase": 1,
+        "reviews": []
+    },
+    {
+        "name": "Монитор 23,6 Acer Nitro EI242QRPbiipx",
+        "price": 5499,
+        "descriptions": "Экран 15.6' IPS (1920x1080) Full HD, матовый / Intel Core i5-1135G7 (4.2 ГГц) / RAM 8 ГБ / SSD 512 ГБ / nVidia GeForce MX350, 2 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / без ОС / 1.9 кг / серебристый",
+        "images": [
+            {
+                "product_id": "products/123654",
+                "url": "https://content1.rozetka.com.ua/goods/images/big/31398243.jpg"
+            }
+        ],
+        "category": "Monitors",
+        "saller": "Rozetka",
+        "stock": 45,
+        "salePrice": 4999,
+        "numOfReviwes": 1566,
+        "numOfPurchase": 400,
+        "reviews": []
+    },
+    {
         "name": "Ноутбук Acer Aspire 5 A515-56G-54JD (NX.A1LEU.00A) Pure Silver",
         "price": 19999,
         "descriptions": "Экран 15.6' IPS (1920x1080) Full HD, матовый / Intel Core i5-1135G7 (4.2 ГГц) / RAM 8 ГБ / SSD 512 ГБ / nVidia GeForce MX350, 2 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / без ОС / 1.9 кг / серебристый",
@@ -12,23 +48,135 @@
         "category": "Laptops",
         "saller": "KTC",
         "stock": 15,
+        "salePrice": 0.0,
         "numOfReviwes": 99,
+        "numOfPurchase": 2,
         "reviews": []
     },
     {
-        "name": "Монітор Acer Aspire 5 A515-56G-54JD (NX.A1LEU.00A) Pure Silver",
-        "price": 10999,
-        "descriptions": "Экран 15.6' IPS (1920x1080) Full HD, матовый / Intel Core i5-1135G7 (4.2 ГГц) / RAM 8 ГБ / SSD 512 ГБ / nVidia GeForce MX350, 2 ГБ / без ОД / LAN / Wi-Fi / Bluetooth / веб-камера / без ОС / 1.9 кг / серебристый",
+        "name": "Мышь Logitech M185 Wireless Grey",
+        "price": 539,
+        "descriptions": "Работает на компьютерах с операционной системой Windows и Mac. Он такой миниатюрный и незаметный, что, подключив его к USB-порту, вы можете оставить его там. К тому же можно смело распрощаться с беспокойством о том, что вы потеряете приемник.",
         "images": [
             {
-                "product_id": "products/123654",
-                "url": "https://i2.rozetka.ua/goods/20687946/acer_nx_a1leu_00a_images_20687946076.jpg"
+                "product_id": "products/910-002238",
+                "url": "https://content.rozetka.com.ua/goods/images/big/10596469.jpg"
             }
         ],
-        "category": "Laptops",
+        "category": "Mouses",
         "saller": "KTC",
-        "stock": 15,
-        "numOfReviwes": 99,
+        "stock": 1000,
+        "salePrice": 0.0,
+        "numOfReviwes": 1832,
+        "numOfPurchase": 666,
+        "reviews": []
+    },
+    {
+        "name": "Процессор AMD Ryzen 5 1600 3.2GHz/16MB",
+        "price": 3934,
+        "descriptions": "Семейство процессоров AMD Ryzen 5, Тип разъема Socket AM4, Количество ядер 6, Интегрированная графика Нет, Тактовая частота процессора 3200 МГц, Объем кэш памяти 3 уровня 16 МБ",
+        "images": [
+            {
+                "product_id": "products/YD1600BBAFBOX",
+                "url": "https://content1.rozetka.com.ua/goods/images/big/16750567.jpg"
+            }
+        ],
+        "category": "Processors",
+        "saller": "Rozetka",
+        "stock": 256,
+        "salePrice": 0.0,
+        "numOfReviwes": 752,
+        "numOfPurchase": 65,
+        "reviews": []
+    },
+    {
+        "name": "Клавиатура проводная HyperX Alloy FPS Pro Cherry MX Red USB",
+        "price": 2799,
+        "descriptions": "Механические переключатели Cherry MX Red, Материал метал с пластиком, Отсоединяемый оплетенный кабель длиной 1.8 м, 100% Anti-Ghosting и N-Key Rollover, Красная подсветка, 6 светодиодных режимов и 4 уровнями яркости, Игровой режим (отключение кнопки Win)",
+        "images": [
+            {
+                "product_id": "products/HX-KB4RD1-RU/R1",
+                "url": "https://content1.rozetka.com.ua/goods/images/big/11165886.jpg"
+            }
+        ],
+        "category": "Keyboards",
+        "saller": "Rozetka",
+        "stock": 420,
+        "salePrice": 0.0,
+        "numOfReviwes": 585,
+        "numOfPurchase": 51,
+        "reviews": []
+    },
+    {
+        "name": "Мобильный телефон Samsung Galaxy A52 8/256GB Black",
+        "price": 11999,
+        "descriptions": "супер влагозащита, матовый корпус, дракон, стерео динамики, механическая стабилизация, камера 4к видео, амолед, 8/256",
+        "images": [
+            {
+                "product_id": "products/sfj,[iygtrrio0]",
+                "url": "https://content1.rozetka.com.ua/goods/images/big/166276939.jpg"
+            }
+        ],
+        "category": "Sellphones",
+        "saller": "Barahlo.com",
+        "stock": 555,
+        "salePrice": 0.0,
+        "numOfReviwes": 33,
+        "numOfPurchase": 3,
+        "reviews": []
+    },
+    {
+        "name": "Телевизор Samsung UE43TU7100UXUA",
+        "price": 13999,
+        "descriptions": "Диагональ экрана 43, Разрешение 3840x2160, Smart-платформа Tizen, Диапазоны цифрового тюнера DVB-C, DVB-S, DVB-S2, DVB-T, DVB-T2, Частота обновления 2000 Гц (PQI)",
+        "images": [
+            {
+                "product_id": "products/100UXUA",
+                "url": "https://content.rozetka.com.ua/goods/images/big/170872145.jpg"
+            }
+        ],
+        "category": "TV set",
+        "saller": "Rozetka",
+        "stock": 233,
+        "salePrice": 12999,
+        "numOfReviwes": 152,
+        "numOfPurchase": 80,
+        "reviews": []
+    },
+    {
+        "name": "Фотоаппарат Nikon Z7II Body",
+        "price": 99999,
+        "descriptions": "Матрица 35.9 x 23.9 мм КМОП, 45.7 Мп / поддержка карт памяти XQD, SD, SDHC, SDXC / Отклоняемый сенсорный ЖК-монитор 3.2 / 4K видео / Wi-Fi / Bluetooth / питание от литий-ионного аккумулятора / 134 x 100.5 x 69.5 мм, 705 г / черный",
+        "images": [
+            {
+                "product_id": "products/VOA070AE",
+                "url": "https://content.rozetka.com.ua/goods/images/big/8005117.jpg"
+            }
+        ],
+        "category": "Cameras",
+        "saller": "Comfy",
+        "stock": 1,
+        "salePrice": 0.0,
+        "numOfReviwes": 1065,
+        "numOfPurchase": 0,
+        "reviews": []
+    },
+    {
+        "name": "Игровая приставка PlayStation 5 Digital Edition",
+        "price": 13699,
+        "descriptions": "8-ядерный x86-64 AMD Ryzen Zen 2 (Частота: до 3.5 ГГц), SSD-накопитель: 825 ГБ, Поддержка телевизоров 4K 120Гц, 8K телевизоров, поддержка, Звук: Технология Tempest 3D AudioTech",
+        "images": [
+            {
+                "product_id": "products/ksfdklfdkmfd55525",
+                "url": "https://content1.rozetka.com.ua/goods/images/big/134045006.jpg"
+            }
+        ],
+        "category": "PlayStation",
+        "saller": "КТС",
+        "stock": 0,
+        "salePrice": 0.0,
+        "numOfReviwes": 1065,
+        "numOfPurchase": 475,
         "reviews": []
     }
 ]

@@ -36,7 +36,14 @@ const productsSchema = new mongoose.Schema({
             values: [
                 'CPU',
                 'Monitors',
-                'Laptops'
+                'Laptops',
+                'Mouses',
+                'Processors',
+                'Keyboards',
+                'Sellphones',
+                'TV set',
+                'Cameras',
+                'PlayStation',
             ],
             message: "Select correct category",
         }
@@ -51,7 +58,17 @@ const productsSchema = new mongoose.Schema({
         maxLength: [5, "Stock range from 1 to 99999"],
         default: 0,
     },
+    salePrice:{
+        type: Number,
+        required: [true, "Enter Sale price"],
+        maxLength: [5, "Sale price range from 1 to 99999"],
+        default: 0.0,
+    },
     numOfReviwers:{
+        type: Number,
+        default: 0,
+    },    
+    numOfPurchase:{
         type: Number,
         default: 0,
     },

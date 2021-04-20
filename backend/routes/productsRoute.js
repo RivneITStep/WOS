@@ -5,8 +5,8 @@ const { getHomePage, getProducts, get404Page, getSingleProduct, deleteProduct, a
 
 router.route("/main").get(getHomePage);
 router.route("/products").get(getProducts);
-router.route("/products-delete:id").get(deleteProduct);
-router.route("/product/:id").get(getSingleProduct)
+router.route("/products-delete/:id").get(deleteProduct);
+//router.route("/product/:id").get(getSingleProduct)
 router.route("/products-add:id").get(addProduct)
 router.route("/product-edit/:id").get(editProduct);
 router.route('*').get(get404Page);

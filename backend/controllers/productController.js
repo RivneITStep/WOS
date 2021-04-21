@@ -9,6 +9,15 @@ exports.getProducts = async (req, res, next) => {
     })
 }
 
+exports.getSingleProduct = async(req, res, next) => {
+    const product = await Product.findById({_id: req.params.id});
+    res.status(200).json({
+        success: true,
+        message: "getSingleProduct",
+        product
+    })
+}
+
 
 exports.addProduct = async(req, res, next) => {
     const products = await Product.insertMany(

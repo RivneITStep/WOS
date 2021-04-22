@@ -1,10 +1,28 @@
 const Product = require("../models/product");
 const catchErrors = require("../middleware/catchErrors");
+const APIExtends = require("../helpers/api");
 
 exports.getProducts = catchErrors(async (req, res, next) => {
-    const products = await Product.find();
+    
+    const resPerPage = 6;
+    const productsCount = await Product.countDocuments();
+
+    const apiFeatures = new APIExtends(Product.find(), req.query)
+        .search()
+        .filter()
+
+    let products = await apiFeatures.query;
+    let filteredProductsCount = products.length;
+
+    apiFeatures.pagination(resPerPage)
+    products = await apiFeatures.query;
+
+
     res.status(200).json({
         success: true,
+        productsCount,
+        resPerPage,
+        filteredProductsCount,
         products
     })
 })

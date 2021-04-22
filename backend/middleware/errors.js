@@ -16,6 +16,26 @@ module.exports = (err, req, res, next) => {
     if (process.env.NODE_ENV === "PRODUCTION") {
         let error = { ...err };
         error.message = err.message;
+
+        // Mongoose Object ID Error
+        if (err.name === 'CastError') {
+            const message = `Resource not found. Invalid: ${err.path}`
+            error = new ErrorHandler(message, 400)
+        }
+
+        // Mongoose Validation Error
+        if (err.name === 'ValidationError') {
+            const message = Object.values(err.errors).map(value => value.message);
+            error = new ErrorHandler(message, 400)
+        }
+
+        // Mongoose duplicate key errors
+        if (err.code === 11000) {
+            const message = `Duplicate ${Object.keys(err.keyValue)} entered`
+            error = new ErrorHandler(message, 400)
+        }
+
+
         res.status(error.statusCode || 500).json({
             status: false,
             message: error.message || "Internal Server Error"

@@ -1,16 +1,16 @@
 const Product = require("../models/product");
+const catchErrors = require("../middleware/catchErrors");
 
-exports.getProducts = async (req, res, next) => {
+exports.getProducts = catchErrors(async (req, res, next) => {
     const products = await Product.find();
     res.status(200).json({
         success: true,
-        message: "getProducts",
         products
     })
-}
+})
 
 
-exports.addProduct = async(req, res, next) => {
+exports.addProduct = catchErrors(async (req, res, next) => {
     const products = await Product.insertMany(
         {
             "name": "Mонитор 28 Samsung Curved C27F396F (LC27F396FHIXCI)",
@@ -28,45 +28,44 @@ exports.addProduct = async(req, res, next) => {
             "numOfReviews": 90,
             "reviews": []
         }
-    )  
+    )
     res.status(200).json({
         success: true,
-        message: "addProduct",
         products
     })
-}
+})
 
 
-exports.deleteProduct = async(req, res, next) => {
+exports.deleteProduct = catchErrors(async (req, res, next) => {
     const idDeleteProduct = req.params.id;
-    const products = await Product.deleteOne({_id: req.params.id});
+    const products = await Product.deleteOne({ _id: req.params.id });
     res.status(200).json({
         success: true,
         message: "deleteProduct",
         idDeleteProduct
     })
-}
+})
 
-exports.editProduct = async(req, res, next) => {
-    const productEdit = await Product.findById({_id: req.params.id});
+exports.editProduct = catchErrors(async (req, res, next) => {
+    const productEdit = await Product.findById({ _id: req.params.id });
     res.status(200).json({
         success: true,
         message: "editProduct",
         productEdit
     })
-}
+})
 
-exports.get404Page = (req, res, next) => {
+exports.get404Page = catchErrors((req, res, next) => {
     res.status(404).json({
         success: true,
         message: "Page-404"
-    })   
+    })
 
-}
+})
 
-exports.getHomePage = (req, res, next) => {
+exports.getHomePage = catchErrors((req, res, next) => {
     res.status(200).json({
         success: true,
         message: "getHomePage"
     })
-}
+})

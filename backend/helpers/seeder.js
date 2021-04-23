@@ -26,7 +26,6 @@ const seedProducts = async () => {
     }
 }
 
-
 const seedUser = async () => {
     try {
         await User.deleteMany();

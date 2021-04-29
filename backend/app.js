@@ -1,11 +1,13 @@
 const express = require("express");
 
+const cors = require('cors');
 
 // Error middleware
 const errorMiddleware = require("./middleware/errors");
 
 const app = express();
 const productRouter = require("./routes/productsRoute")
+app.use(cors())
 
 app.use("/api/v1/", productRouter)
 

@@ -2,6 +2,7 @@ import React from 'react'
 import { Navbar, Form, Button } from "react-bootstrap"
 import "./contact.css"
 
+
 const Contact = () => {
     return (
         <Navbar className="container bootstrap snippets bootdeys" style={{ height: '800px' }}>

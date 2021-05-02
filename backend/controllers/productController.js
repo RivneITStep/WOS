@@ -3,7 +3,7 @@ const catchErrors = require("../middleware/catchErrors");
 const APIExtends = require("../helpers/api");
 
 exports.getProducts = catchErrors(async (req, res, next) => {
-    
+
     const resPerPage = 6;
     const productsCount = await Product.countDocuments();
 

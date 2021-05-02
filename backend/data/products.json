@@ -73,7 +73,7 @@
     },
     {
         "name": "Телевизор Samsung UE43TU7100UXUA",
-        "price": 13999,
+        "price": 14000,
         "descriptions": "Диагональ экрана 43, Разрешение 3840x2160, Smart-платформа Tizen, Диапазоны цифрового тюнера DVB-C, DVB-S, DVB-S2, DVB-T, DVB-T2, Частота обновления 2000 Гц (PQI)",
         "images": [
             {
@@ -107,7 +107,6 @@
         "numOfPurchase": 0,
         "reviews": []
     },
-
     {
         "name": "Ноутбук Asus Laptop E410MA-EB268 (90NB0Q11-M17970) Peacock Blue",
         "price": 9999,
@@ -141,6 +140,5 @@
         "stock": 10,
         "numOfReviews": 50,
         "reviews": []
-    },
-
+    }
 ]

@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Andrew",
+        "email": "andrew_h@gmail.com",
+        "password": "userWOS",
+        "avatar": [
+            {
+                "avatar.public_id": "user/23",
+                "avatar.url": "https://i.pinimg.com/474x/77/5b/91/775b91d4b1bfcac2aa3292b47763c1b1.jpg"
+            }
+        ],
+        "role": "user"
+    }
+]

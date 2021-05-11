@@ -1,10 +1,48 @@
-const Product = require("../models/product");
-const catchErrors = require("../middleware/catchErrors");
-const APIExtends = require("../helpers/api");
+const Product = require('../models/product')
 
+const ErrorHandler = require('../helpers/errorHandler');
+const catchErrors = require('../middleware/catchErrors');
+const APIExtends = require('../helpers/api')
+
+// Create new product   =>   /api/v1/admin/product/new
+exports.newProduct = catchErrors(async (req, res, next) => {
+
+    let images = []
+    if (typeof req.body.images === 'string') {
+        images.push(req.body.images)
+    } else {
+        images = req.body.images
+    }
+
+    let imagesLinks = [];
+
+    for (let i = 0; i < images.length; i++) {
+        const result = await cloudinary.v2.uploader.upload(images[i], {
+            folder: 'products'
+        });
+
+        imagesLinks.push({
+            public_id: result.public_id,
+            url: result.secure_url
+        })
+    }
+
+    req.body.images = imagesLinks
+    req.body.user = req.user.id;
+
+    const product = await Product.create(req.body);
+
+    res.status(201).json({
+        success: true,
+        product
+    })
+})
+
+
+// Get all products   =>   /api/v1/products?keyword=apple
 exports.getProducts = catchErrors(async (req, res, next) => {
-    
-    const resPerPage = 6;
+
+    const resPerPage = 4;
     const productsCount = await Product.countDocuments();
 
     const apiFeatures = new APIExtends(Product.find(), req.query)
@@ -25,65 +63,193 @@ exports.getProducts = catchErrors(async (req, res, next) => {
         filteredProductsCount,
         products
     })
+
 })
 
+// Get all products (Admin)  =>   /api/v1/admin/products
+exports.getAdminProducts = catchErrors(async (req, res, next) => {
 
-exports.addProduct = catchErrors(async (req, res, next) => {
-    const products = await Product.insertMany(
-        {
-            "name": "Mонитор 28 Samsung Curved C27F396F (LC27F396FHIXCI)",
-            "price": 25000,
-            "descriptions": "Ощутите поистине захватывающие эмоции от просмотра или работы с необычайно изогнутым монитором Samsung. Линия изгиба изогнутого монитора такая же как у экрана в кинотеатре iMax и составляет 1 800 R или 1 800 мм (радиус дуги по которой изогнут экран), что создает более широкое поле зрения, повышает глубину восприятия картинки и сводит к минимуму отвлечения по периферии. Таким образом, любимое ТВ-шоу, гоночная игра и другой медиа-контент подарят совершенно иной, незабываемый опыт.",
-            "images": [
-                {
-                    "product_id": "products/g2030405",
-                    "url": "https://i2.rozetka.ua/goods/18530646/acer_um_kv2ee_p01_images_18530646283.jpg"
-                }
-            ],
-            "category": "Monitors",
-            "seller": "Rozetka",
-            "stock": 10,
-            "numOfReviews": 90,
-            "reviews": []
-        }
-    )
+    const products = await Product.find();
+
     res.status(200).json({
         success: true,
         products
     })
+
 })
 
+// Get single product details   =>   /api/v1/product/:id
+exports.getSingleProduct = catchErrors(async (req, res, next) => {
 
+    const product = await Product.findById(req.params.id);
+
+    if (!product) {
+        return next(new ErrorHandler('Product not found', 404));
+    }
+
+
+    res.status(200).json({
+        success: true,
+        product
+    })
+
+})
+
+// Update Product   =>   /api/v1/admin/product/:id
+exports.updateProduct = catchErrors(async (req, res, next) => {
+
+    let product = await Product.findById(req.params.id);
+
+    if (!product) {
+        return next(new ErrorHandler('Product not found', 404));
+    }
+
+    let images = []
+    if (typeof req.body.images === 'string') {
+        images.push(req.body.images)
+    } else {
+        images = req.body.images
+    }
+
+    if (images !== undefined) {
+
+        // Deleting images associated with the product
+        for (let i = 0; i < product.images.length; i++) {
+            const result = await cloudinary.v2.uploader.destroy(product.images[i].public_id)
+        }
+
+        let imagesLinks = [];
+
+        for (let i = 0; i < images.length; i++) {
+            const result = await cloudinary.v2.uploader.upload(images[i], {
+                folder: 'products'
+            });
+
+            imagesLinks.push({
+                public_id: result.public_id,
+                url: result.secure_url
+            })
+        }
+
+        req.body.images = imagesLinks
+
+    }
+
+
+
+    product = await Product.findByIdAndUpdate(req.params.id, req.body, {
+        new: true,
+        runValidators: true,
+        useFindAndModify: false
+    });
+
+    res.status(200).json({
+        success: true,
+        product
+    })
+
+})
+
+// Delete Product   =>   /api/v1/admin/product/:id
 exports.deleteProduct = catchErrors(async (req, res, next) => {
-    const idDeleteProduct = req.params.id;
-    const products = await Product.deleteOne({ _id: req.params.id });
+
+    const product = await Product.findById(req.params.id);
+
+    if (!product) {
+        return next(new ErrorHandler('Product not found', 404));
+    }
+
+    // Deleting images associated with the product
+    for (let i = 0; i < product.images.length; i++) {
+        const result = await cloudinary.v2.uploader.destroy(product.images[i].public_id)
+    }
+
+    await product.remove();
+
     res.status(200).json({
         success: true,
-        message: "deleteProduct",
-        idDeleteProduct
-    })
-})
-
-exports.editProduct = catchErrors(async (req, res, next) => {
-    const productEdit = await Product.findById({ _id: req.params.id });
-    res.status(200).json({
-        success: true,
-        message: "editProduct",
-        productEdit
-    })
-})
-
-exports.get404Page = catchErrors((req, res, next) => {
-    res.status(404).json({
-        success: true,
-        message: "Page-404"
+        message: 'Product is deleted.'
     })
 
 })
 
-exports.getHomePage = catchErrors((req, res, next) => {
+
+// Create new review   =>   /api/v1/review
+exports.createProductReview = catchErrors(async (req, res, next) => {
+
+    const { rating, comment, productId } = req.body;
+
+    const review = {
+        user: req.user._id,
+        name: req.user.name,
+        rating: Number(rating),
+        comment
+    }
+
+    const product = await Product.findById(productId);
+
+    const isReviewed = product.reviews.find(
+        r => r.user.toString() === req.user._id.toString()
+    )
+
+    if (isReviewed) {
+        product.reviews.forEach(review => {
+            if (review.user.toString() === req.user._id.toString()) {
+                review.comment = comment;
+                review.rating = rating;
+            }
+        })
+
+    } else {
+        product.reviews.push(review);
+        product.numOfReviews = product.reviews.length
+    }
+
+    product.ratings = product.reviews.reduce((acc, item) => item.rating + acc, 0) / product.reviews.length
+
+    await product.save({ validateBeforeSave: false });
+
+    res.status(200).json({
+        success: true
+    })
+
+})
+
+
+// Get Product Reviews   =>   /api/v1/reviews
+exports.getProductReviews = catchErrors(async (req, res, next) => {
+    const product = await Product.findById(req.query.id);
+
     res.status(200).json({
         success: true,
-        message: "getHomePage"
+        reviews: product.reviews
+    })
+})
+
+// Delete Product Review   =>   /api/v1/reviews
+exports.deleteReview = catchErrors(async (req, res, next) => {
+
+    const product = await Product.findById(req.query.productId);
+
+    console.log(product);
+
+    const reviews = product.reviews.filter(review => review._id.toString() !== req.query.id.toString());
+
+    const numOfReviews = reviews.length;
+
+    const ratings = product.reviews.reduce((acc, item) => item.rating + acc, 0) / reviews.length
+
+    await Product.findByIdAndUpdate(req.query.productId, {
+        reviews,
+        ratings,
+        numOfReviews
+    }, {
+        new: true,
+        runValidators: true,
+        useFindAndModify: false
+    })
+
+    res.status(200).json({
+        success: true
     })
 })
